@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "Engyne — IndiaMART Automation",
+  "version": "0.1.0",
+  "description": "Professional IndiaMART buy-lead automation for Engyne customers.",
+  "permissions": ["storage", "alarms", "activeTab", "scripting"],
+  "host_permissions": [
+    "https://*.indiamart.com/*",
+    "http://localhost:8000/*",
+    "http://127.0.0.1:8000/*"
+  ],
+  "background": {
+    "service_worker": "background/service-worker.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "Engyne"
+  },
+  "options_page": "options/options.html",
+  "content_scripts": [
+    {
+      "matches": ["https://*.indiamart.com/*"],
+      "js": ["content/content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "engine/**/*.js",
+        "storage/**/*.js",
+        "api/**/*.js",
+        "auth/**/*.js"
+      ],
+      "matches": ["https://*.indiamart.com/*"]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Engyne</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Engyne</h1>
+      <p class="sub">IndiaMART automation</p>
+    </header>
+    <section id="pair-section">
+      <label>Setup key</label>
+      <input id="setup-key" type="text" placeholder="engy_..." autocomplete="off" />
+      <button id="pair-btn">Pair device</button>
+    </section>
+    <section id="status-section" hidden>
+      <p id="status-line">Connected</p>
+      <p id="plan-line"></p>
+      <div class="row">
+        <button id="start-btn">Start</button>
+        <button id="stop-btn">Stop</button>
+        <button id="options-btn">Settings</button>
+      </div>
+    </section>
+    <p id="msg" class="msg"></p>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Engyne Settings</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Engyne</h1>
+      <p class="lede">Configure rules, then Save Training. Decisions run locally in the extension.</p>
+
+      <label>Keywords (comma separated)</label>
+      <textarea id="keywords" rows="2"></textarea>
+
+      <label>Restricted keywords</label>
+      <textarea id="restricted" rows="2"></textarea>
+
+      <label>Locations</label>
+      <textarea id="locations" rows="2"></textarea>
+
+      <div class="grid">
+        <div>
+          <label>Capacity min</label>
+          <input id="cap-min" type="number" />
+        </div>
+        <div>
+          <label>Capacity max</label>
+          <input id="cap-max" type="number" />
+        </div>
+        <div>
+          <label>Daily buy limit</label>
+          <input id="daily-limit" type="number" />
+        </div>
+        <div>
+          <label>Buying hours start</label>
+          <input id="hours-start" type="time" />
+        </div>
+        <div>
+          <label>Buying hours end</label>
+          <input id="hours-end" type="time" />
+        </div>
+        <div>
+          <label>Refresh interval (sec)</label>
+          <input id="refresh-interval" type="number" min="15" max="300" />
+        </div>
+      </div>
+
+      <label class="check"><input id="auto-buy" type="checkbox" /> Auto-buy when BUY</label>
+      <label class="check"><input id="auto-refresh" type="checkbox" /> Auto refresh</label>
+      <label class="check"><input id="scheduler" type="checkbox" /> Scheduler enabled</label>
+
+      <div class="actions">
+        <button id="save-btn">Save Training</button>
+        <span id="save-msg"></span>
+      </div>
+    </main>
+    <script type="module" src="options.js"></script>
+  </body>
+</html>

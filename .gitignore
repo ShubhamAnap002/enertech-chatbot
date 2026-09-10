@@ -1,0 +1,42 @@
+# Secrets & local env
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# Python
+backend/.venv/
+backend/**/__pycache__/
+backend/**/*.pyc
+backend/engyne.db
+backend/storage/
+backend/.pytest_cache/
+backend/*.egg-info/
+
+# Node / frontend
+**/node_modules/
+**/.output/
+**/dist/
+**/.tanstack/
+**/.nitro/
+**/*.local
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.sw?
+
+# Nested Lovable git (hub keeps its own remote; do not nest)
+martpilot-operations-hub/.git/
+
+# Misc
+*.log
+.coverage
+htmlcov/
+
+# Admin hub lives in its own GitHub/Lovable repo — not nested here
+martpilot-operations-hub/
