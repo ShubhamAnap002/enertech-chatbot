@@ -17,3 +17,7 @@ Multi-tenant IndiaMART automation platform.
 See `backend/README.md`, `backend/DEPLOY.md`, and `extension/README.md`.
 
 **Never commit** `backend/.env` (secrets).
+
+## Deploy
+Connected for Render deploy.
+
